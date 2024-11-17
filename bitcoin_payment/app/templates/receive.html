@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="receive-payment">
+    <h2>Receive Payment</h2>
+    <div class="qr-code">
+        <img src="#" alt="QR code">
+    </div>
+    <p>Address: {{ address }}</p>
+    <button class="btn">Copy address</button>
+</div>
+{% endblock %}
