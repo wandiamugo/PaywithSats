@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="create-wallet">
+    <img src="/static/images/btc2.jpg" alt="Bitcoin Wallet">
+    <h2>Create New Wallet</h2>
+
+    {% if error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+
+    {% if success %}
+    <p style="color: green;">{{ success }}</p>
+    <p><strong>Wallet Name:</strong> {{ wallet_name }}</p>
+    <p><strong>Mnemonic Phrase:</strong> {{ wallet_data.mnemonic }}</p>
+    <p><strong>Address:</strong> {{ wallet_data.address }}</p>
+    <p><strong>Private Key:</strong> {{ wallet_data.private_key }}</p>
+    <p><strong>Public Key:</strong> {{ wallet_data.public_key }}</p>
+    {% endif %}
+
+
+    <form action="{{ url_for('create_wallet') }}" method="post">
+        <label for="wallet_name">Enter Wallet Name:</label>
+        <input type="text" name="wallet_name" id="wallet_name" required placeholder="Type wallet name here...">
+
+        <button type="submit">Create Wallet</button>
+    </form>
+</div>
+{% endblock %}
