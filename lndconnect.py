@@ -50,6 +50,25 @@ def get_transactions():
     response = stub.GetTransactions(lightning_pb2.GetTransactionsRequest())
     return response.data
 
+def send_coins(address, amount, sat_per_vbyte=None):
+    try:
+        channel = connect_lnd()
+        stub = lightning_pb2_grpc.LightningStub(channel)
+        request = lightning_pb2.SendCoinsRequest(
+                addr=address,
+                amount=amount,
+                sat_per_vbyte=sat_per_vbyte if sat_per_vbyte else 0,
+            )
+        response = stub.SendCoins(request)
+        return {
+                "txid": response.txid,
+                "amount": amount,
+                "address": address,
+                "status": "success",
+            }
+    except grpc.RpcError as e:
+        return {"error": e.details()}
+
 
 
 def create_invoice(amount, memo):

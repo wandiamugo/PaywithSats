@@ -3,51 +3,167 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ea9ce0;
+    text-align: center;
 }
 
 .container {
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    background-color: #ea9ce0;
-}
-
-main {
-    margin-top: 20px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
     padding: 10px;
-    background-color: #333;
-    color: #D9D9D9;
+    text-align: center;
 }
 
-.btn {
+h1, h2 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #000;
+    text-align: center;
+}
+
+.wallet_options img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.btn, button {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 15px 30px;
+    margin: 10px auto;
     background-color: #220f25;
     color: #D9D9D9;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    border: none;
+    cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #220f25;
+.btn:hover, button:hover {
+    background-color: #444;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #D9D9D9;
+    padding: 10px;
+    font-size: 0.8em;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
-input, button {
-    padding: 10px;
+input, textarea {
+    padding: 15px;
+    width: 90%;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+input[type="password"] {
+    background-color: #444;
+}
+input[type="text"] {
+    background-color: #444;
+}
+input[type="number"] {
+    background-color: #444;
+}
+textarea[name="seed"] {
+    background-color: #444;
+}
+
+input.create-wallet-input {
+    background-color: #220f25; 
+    color: #D9D9D9;
+    border: none;
+    margin-bottom: 10px;
+}
+
+input.create-wallet-input:focus {
+    outline: none;
+    background-color: #444; 
+}
+
+input.recover-wallet-input {
+    background-color: #220f25;
+    color: #D9D9D9;
+    border: none;
+    margin-bottom: 10px;
+}
+
+input.recover-wallet-input:focus {
+    outline: none;
+    background-color: #444;
+}
+
+@media (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .btn, button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 8px;
+    }
+
+    input, textarea {
+        font-size: 0.9em; 
+    }
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    .btn, button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    input, textarea {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
 }

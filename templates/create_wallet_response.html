@@ -5,5 +5,5 @@
 <p>Wallet Name: {{ wallet_name }}</p>
 <p>Address: {{ address }}</p>
 <p>IMPORTANT: Please save your mnemonic phrase securely. It cannot be recovered if lost!</p>
-<a href="/">Create another wallet</a>
+<div class="button"><a href="{{ url_for('send_payment') }}">Make payment</a></div>
 {% endblock %}
