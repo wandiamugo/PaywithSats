@@ -51,3 +51,21 @@ transaction status.Wallet Balance`
 #Install dependencies:
 
 pip install -r requirements.txt
+
+CONTRIBUTORS 
+
+[@sawe-daisy](https://github.com/sawe-daisy)
+
+[@grace-mugoiri](https://github.com/grace-mugoiri)
+
+[@wandiamugo](https://github.com/wandiamugo)
+
+[@brendaoduor](https://github.com/brendaoduor)
+
+[@victoriandicu](https://github.com/victoriandicu)
+
+[@salhabenazir](https://github.com/salhabenazir)
+
+[@vera_wuor](https://github.com/vera_wuor)
+
+
