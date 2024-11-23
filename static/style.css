@@ -37,7 +37,7 @@ h1, h2 {
     display: inline-block;
     padding: 15px 30px;
     margin: 10px auto;
-    background-color: #220f25;
+    background-color: #d0356c;
     color: #D9D9D9;
     text-decoration: none;
     border-radius: 5px;
@@ -50,7 +50,7 @@ h1, h2 {
 }
 
 .btn:hover, button:hover {
-    background-color: #444;
+    background-color: #ff4081;
 }
 
 footer {
@@ -83,20 +83,20 @@ input, textarea {
 }
 
 input[type="password"] {
-    background-color: #444;
+    background-color: #ff4081;
 }
 input[type="text"] {
-    background-color: #444;
+    background-color: #ff4081;
 }
 input[type="number"] {
-    background-color: #444;
+    background-color: #ff4081;
 }
 textarea[name="seed"] {
-    background-color: #444;
+    background-color: #ff4081;
 }
 
 input.create-wallet-input {
-    background-color: #220f25; 
+    background-color: #ff4081; 
     color: #D9D9D9;
     border: none;
     margin-bottom: 10px;
@@ -104,11 +104,11 @@ input.create-wallet-input {
 
 input.create-wallet-input:focus {
     outline: none;
-    background-color: #444; 
+    background-color: #d0356c; 
 }
 
 input.recover-wallet-input {
-    background-color: #220f25;
+    background-color: #ff4081;
     color: #D9D9D9;
     border: none;
     margin-bottom: 10px;
@@ -116,7 +116,7 @@ input.recover-wallet-input {
 
 input.recover-wallet-input:focus {
     outline: none;
-    background-color: #444;
+    background-color: #d0356c;
 }
 
 @media (max-width: 600px) {
@@ -166,4 +166,54 @@ input.recover-wallet-input:focus {
     h2 {
         font-size: 2em;
     }
+}
+.transaction-successful,
+.wallet-info {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+.transaction-successful img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+h2, h1 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.important {
+    font-weight: bold;
+    color: red;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #fff;
+    background-color: #d0356c; /* Matches the pink theme */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4081; /* Slightly darker shade on hover */
+}
+
+a {
+    font-size: 16px;
 }

@@ -159,6 +159,13 @@ def send_to_address(rpc_user, rpc_password, address, amount, rpc_port=38332, rpc
             }
     except requests.exceptions.RequestException as e:
         return {"error": str(e), "status": "failure"}
+    
+@app.route('/check_balance', methods=['GET'])
+def check_balance():
+    rpc_connection = AuthServiceProxy("http://sawe:1234@127.0.0.1:38332/wallet/signetwallet1")
+    balance =rpc_connection.getbalance()
+    return render_template('balance.html', balance=balance)
+
 
 
 # @app.route('/recover_wallet')

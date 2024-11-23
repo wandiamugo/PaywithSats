@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Wallet Created Successfully!</h1>
-<p>Wallet Name: {{ wallet_name }}</p>
-<p>Address: {{ address }}</p>
-<p>IMPORTANT: Please save your mnemonic phrase securely. It cannot be recovered if lost!</p>
-<div class="button"><a href="{{ url_for('send_payment') }}">Make payment</a></div>
+<div class="wallet-info">
+    <h1>Wallet Created Successfully!</h1>
+    <p>Wallet Name: {{ wallet_name }}</p>
+    <p>Address: {{ address }}</p>
+    <p class="important">IMPORTANT: Please save your mnemonic phrase securely. It cannot be recovered if lost!</p>
+    <div class="buttons">
+        <a href="{{ url_for('send_payment') }}" class="btn">Make Payment</a>
+        <a href="{{ url_for('check_balance') }}" class="btn">Check Balance</a>
+    </div>
+</div>
 {% endblock %}

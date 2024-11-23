@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="balance-container">
+    <h1>Your Wallet Balance</h1>
+    <div class="balance-card">
+        <p class="label">Current Balance:</p>
+        <p class="balance">{{ balance }} Sats</p>
+    </div>
+    <div class="buttons">
+        <a href="{{ url_for('send_payment') }}" class="btn">Make Payment</a>
+    </div>
+</div>
+{% endblock %}
